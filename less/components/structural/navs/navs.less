@@ -1,0 +1,16 @@
+ul.nav{
+  li{
+    a {
+      color: @navColor;
+      background: @navBg;
+      display: block;
+      margin: @leading/4;
+      padding: @leading/2;
+      &.active,
+      &:hover{
+        color: @navActiveColor;
+        background: @navActiveBg;
+      }
+    }
+  }
+}
