@@ -1,0 +1,16 @@
+.triangle::after{
+  .doTriangle(-45deg, red);
+}
+
+.doTriangle(@rotation, @color){
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 1em solid black;
+  border-color: transparent transparent @color @color;
+  transform-origin: 0 0;
+  transform: rotate(@rotation);
+  box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.1);
+}

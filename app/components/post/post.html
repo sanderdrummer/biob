@@ -1,0 +1,8 @@
+<div class="fixedContainer" ng-if="post.active && post.active.title">
+    <div class="postContainer">
+        <h1 class="postTitle">{{post.active.title.rendered}}</h1>
+        <img class="postMedia" ng-if="post.active.featured_media" src="{{post.active.featured_media}}" alt="">
+        <html-render class="postContent" html="post.active.content.rendered"></html-render>
+        <div class="paging" ng-click="post.back()">zurück</div>
+    </div>
+</div>

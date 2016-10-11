@@ -1,0 +1,13 @@
+<div ng-if="posts.loading" class="loader"></div>
+<div class="postListWrapper">
+    <ul class="postList">
+        <li class="listItem" ng-repeat="post in posts.list track by post.id">
+            <a class="listItemTitle" ng-click="posts.showPost()" ui-sref="category.post({id: post.id})">{{post.title.rendered}}</a>
+            <img class="listItemMedia" ng-if="post.featured_media" src="{{post.featured_media}}" alt="">
+            <html-render html="post.excerpt.rendered" class="listItemContent"></html-render>
+        </li>
+
+        <div class="listItemPaging" ng-if="posts.page < posts.pages" ng-click="posts.nextPage()">mehr</div>
+    </ul>
+</div>
+<div ui-view="posts"></div>

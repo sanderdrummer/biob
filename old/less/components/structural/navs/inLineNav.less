@@ -1,0 +1,37 @@
+
+
+@media only screen and (min-width: 1px) {
+  .nav.inLineNav{
+    background-color: @navColor;
+    width: 100%;
+    li{
+      a{
+        height: 2*@leading;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: @laptop) {
+  .nav.inLineNav{
+    .flexBox();
+    flex-wrap: wrap;
+    background-color: @navBg;
+    height: 2*@leading;
+    width: 100%;
+    li{
+      a{
+        position: relative;
+        height: 2*@leading;
+        margin: 0;
+        &.active:after {
+          .doTriangle(-45deg, @navActiveBg);
+          bottom: -1rem;
+          left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.flexBox(){
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.newCol(@number){
+  .item-@{number}{
+    flex-grow: 1;
+    width: percentage(@number/@colCount);
+  }
+}
+.newOffset(@number){
+  .off-@{number}{
+    margin-left: percentage(@number/@colCount);
+  }
+}
+
+.flex {
+  .flexBox();
+  flex-wrap: wrap;
+  &.down{
+    flex-direction: column
+  }
+}
+
+.padderFlex {
+  .flexBox();
+  flex-wrap: wrap;
+
+}
+@media only screen and (min-width: 1px) {
+    [class*='item-'] {
+      flex-grow: 1;
+      width: 100%;
+    }
+
+  .padderFlex{
+    & > *[class*='item-'] {
+      margin-left:0;
+      margin-right:0;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: @laptop) {
+  .colLoop (@index) when (@index > 0) {
+
+    .newCol(@index);
+    .newOffset(@index);
+    .colLoop(@index - 1);
+  }
+  .colLoop(@colCount);
+  .padderFlex{
+    margin-left: -@leading/2;
+    margin-right: -@leading/2;
+    & > [class*='item-']{
+      padding: @leading/2;
+      position: relative;
+    }
+  }
+}

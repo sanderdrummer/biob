@@ -1,0 +1,34 @@
+.inLineNav {
+  position: fixed;
+  top:0;
+  margin:0;
+}
+
+@media only screen and (min-width: 1px) {
+  .inLineNav{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: @laptop) {
+  .inLineNav{
+    display: block;
+  }
+}
+
+.hero{
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  top: 0;
+  .heroText{
+    margin-top: 12rem;
+    color: @white;
+    text-align: center;
+  }
+}
+.firstRow{
+  margin-top: 43rem;
+}

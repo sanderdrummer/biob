@@ -1,0 +1,14 @@
+{
+  "name": "GridSystem",
+  "version": "1.0.0",
+  "author": "Tobias Pickel",
+  "dependencies": {},
+
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-less": "*",
+    "gulp-concat": "*",
+    "gulp-order": "*",
+    "gulp-minify-css": "*"
+  }
+}
