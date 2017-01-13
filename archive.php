@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="section">
+	<section id="primary" class="section slideUp">
 		<main id="main" class="site-main" role="main">
 
         <?php

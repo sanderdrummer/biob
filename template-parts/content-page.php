@@ -8,7 +8,7 @@
  */
 
 ?>
-
+test
 <article id="post-<?php the_ID(); ?>" class="section">
 	<div class="entry-content">
 		<?php

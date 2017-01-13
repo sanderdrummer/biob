@@ -1,11 +1,14 @@
 $primary: #058199;
 $size-6: 18px;
 $lobster:'Lobster', cursive!important;
-
 $family-sans-serif: 'Raleway', sans-serif;
+$tablet: 769px;
+$desktop: 1000px;
+$widescreen: 1192px;
 
 @import "~bulma";
-
+@import "animations";
+@import "posts";
 
 .lobster {
   font-family: $lobster;
@@ -14,4 +17,13 @@ $family-sans-serif: 'Raleway', sans-serif;
 .section.is-wide {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.pagination-next,
+.pagination-previous{
+  overflow: hidden;
+}
+
+.button.is-primary.is-outlined:hover{
+  a {color: white};
 }

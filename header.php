@@ -20,26 +20,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="">
-
-	<header id="masthead" class="site-header" role="banner">
-        <section class="hero is-primary is-large has-shadow">
+<div id="page">
+    <header id="masthead" class="site-header" role="banner">
+        <section class="hero is-primary <?php  echo is_front_page() ? 'is-medium' : ''?> has-shadow">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">
-                        Hero title
+                    <h1 class="title is-2 lobster">
+                        Blame it on Bernie
                     </h1>
-                    <h2 class="subtitle">
-                        Hero subtitle
+                    <h2 class="subtitle is-5">
+                        Funk und Soul aus Hamburg
                     </h2>
-                    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'biob' ); ?></a>
-
                 </div>
             </div>
             <div class="hero-foot">
                 <nav id="site-navigation" class="nav " role="navigation">
                     <div class="nav-left container">
-                        <?php wp_nav_menu(array('items_wrap' => '%3$s', 'walker' => new Bootstrap_Nav_Walker(), 'container' => false, 'menu_class' => '', 'theme_location' => 'primary_navigation')); ?>
+                        <?php wp_nav_menu(array('items_wrap' => '%3$s', 'walker' => new Bootstrap_Nav_Walker(), 'container' => false, 'menu_class' => '', 'theme_location' => 'menu-1')); ?>
                     </div>
                 </nav>
             </div>
