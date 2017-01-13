@@ -156,7 +156,7 @@ class Bootstrap_Nav_Walker extends Walker_Nav_Menu {
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
         $item_output = $args->before;
         $item_output .= '<a class="nav-item ' . $class_names  . '"' . $attributes . '>';
-        $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+        $item_output .= $args->link_before . $item->title . $args->link_after;
         $item_output .= '</a>';
         $item_output .= $args->after;
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
@@ -186,3 +186,10 @@ function add_post_formats() {
 
 add_action( 'after_setup_theme', 'add_post_formats', 20 );
 
+// remove emjois
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+function my_deregister_scripts(){
+    wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
