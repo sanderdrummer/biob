@@ -20,7 +20,7 @@
             <div class="level-right column is-8">
                 <div>
                     <?php the_title( sprintf( '<a href="%s" rel="bookmark"><p class="title is-4">', esc_url( get_permalink() ) ), '</p></a>' ); ?>
-                    <p class="subtitle is-6">@<?php the_date( 'd-m-Y', '', '' ); ?></p>
+                    <p class="subtitle is-6"><?php the_date( 'd-m-Y', '', '' ); ?></p>
 
                     <?php the_content( sprintf(
                     /* translators: %s: Name of current post. */

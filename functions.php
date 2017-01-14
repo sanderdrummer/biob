@@ -100,13 +100,13 @@ function biob_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'biob_widgets_init' );
+// add_action( 'widgets_init', 'biob_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function biob_scripts() {
-	wp_enqueue_style( 'biob-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'biob-style', get_stylesheet_uri() );
     wp_enqueue_style( 'bundle', get_template_directory_uri() . '/dist/bundle.css',false,'1.1','all');
 
 	// wp_enqueue_script( 'biob-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -197,7 +197,7 @@ add_action( 'wp_footer', 'my_deregister_scripts' );
 
 
 function get_breadcrumb() {
-    echo '<div class="breadcrumbs section is-wide">';
+    echo '<div class="breadcrumbs">';
     if (is_category() || is_single()) {
         echo '<span class="tag">';
         the_category(' &bull; ');

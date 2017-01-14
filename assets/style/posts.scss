@@ -1,10 +1,14 @@
 .breadcrumbs{
+  padding: 3em 0 0 0;
   .tag{
     margin-left: -0.875em;
     padding-right: 1.2em;
   }
   .tag:first-child {
     margin-left: 0em;
+  }
+  .tag:last-child {
+    box-shadow: 2px 0px 2px hsla(0,0%,4%,.4);
   }
 }
 .post-container {
@@ -18,9 +22,6 @@
     min-height: 23rem;
     position: relative;
     width: 100%;
-    .box {
-      box-shadow: 0 2px 3px hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.1);
-    }
   }
 
   .post-title-container {
@@ -28,6 +29,10 @@
     position: absolute;
     top: -2em;
     left: 0;
+    &.box {
+      box-shadow: 1px 2px 3px hsla(0,0%,4%,.2), 0 0 0 1px hsla(0,0%,4%,.1);
+    }
+
   }
 
   .post-text-container {
@@ -35,5 +40,9 @@
     padding-left: 7%;
     margin-left: 35%;
     margin-top: 2em;
+    &.box {
+      box-shadow: 0 2px 3px hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.1);
+    }
+
   }
 }

@@ -18,7 +18,6 @@ echo get_breadcrumb();
                 </figure>
             <?php endif; ?>
             <h1 class="title is-3"><?php the_title(); ?></h1>
-            <p class="subtitle is-6">@<?php the_author(); ?></p>
             <p class="subtitle is-6"><?php the_date( 'd-m-Y', '', '' ); ?></p>
         </div>
         <div class="box post-text-container">
