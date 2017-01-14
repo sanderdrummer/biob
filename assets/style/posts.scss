@@ -1,4 +1,12 @@
-
+.breadcrumbs{
+  .tag{
+    margin-left: -0.875em;
+    padding-right: 1.2em;
+  }
+  .tag:first-child {
+    margin-left: 0em;
+  }
+}
 .post-container {
   .box {
     box-shadow: none;

@@ -6,7 +6,7 @@
  *
  * @package Biob
  */
-
+echo get_breadcrumb();
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="section is-wide">

@@ -193,3 +193,29 @@ function my_deregister_scripts(){
     wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
+
+
+
+function get_breadcrumb() {
+    echo '<div class="breadcrumbs section is-wide">';
+    if (is_category() || is_single()) {
+        echo '<span class="tag">';
+        the_category(' &bull; ');
+        echo '</span>';
+        if (is_single()) {
+            echo '<span class="tag is-primary">';
+            the_title();
+            echo '</span>';
+        }
+    } elseif (is_page()) {
+        echo '<span class="tag is-primary">';
+
+        echo the_title();
+        echo '</span>';
+    } elseif (is_search()) {
+        echo '<span class="tag is-primary">';
+        echo the_search_query();
+        echo '</span>';
+    }
+    echo '</div>';
+}

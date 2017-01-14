@@ -15,11 +15,12 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 <div id="page">
     <header id="masthead" class="site-header" role="banner">
         <section class="hero is-primary <?php  echo is_front_page() ? 'is-medium' : ''?> has-shadow">
