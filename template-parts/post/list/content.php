@@ -6,6 +6,7 @@
  *
  * @package Biob
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="section is-wide">
@@ -19,7 +20,7 @@
 
             <div class="level-right column is-8">
                 <div>
-                    <?php the_title( sprintf( '<a href="%s" rel="bookmark"><p class="title is-4">', esc_url( get_permalink() ) ), '</p></a>' ); ?>
+                    <?php the_title( sprintf( '<a href="%s" class="is-primary" rel="bookmark"><p class="title is-4">', esc_url( get_permalink() ) ), '</p></a>' ); ?>
                     <p class="subtitle is-6"><?php the_date( 'd-m-Y', '', '' ); ?></p>
 
                     <?php the_content( sprintf(

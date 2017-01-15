@@ -27,6 +27,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 
 </body>
 </html>
