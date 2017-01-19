@@ -68,13 +68,13 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 /**
  * Created by Tobias on 11.01.2017.
@@ -83,6 +83,6 @@ console.log('hallo welt');
 
 __webpack_require__(0);
 
-/***/ })
+/***/ }
 /******/ ]);
 //# sourceMappingURL=bundle.js.map

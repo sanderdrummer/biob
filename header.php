@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <div id="page">
     <header id="masthead" class="site-header" role="banner">
-        <section class="hero is-primary <?php  echo is_front_page() ? 'is-medium' : ''?> has-shadow">
+        <section class="main-bg hero is-primary <?php  echo is_front_page() ? 'is-medium' : ''?> has-shadow">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title is-2 lobster">
