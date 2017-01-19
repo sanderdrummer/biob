@@ -7,15 +7,22 @@ $tablet: 769px;
 $desktop: 1000px;
 $widescreen: 1192px;
 
+$retro: #d7d7cc;
+$white: #f0f0ec;
 @import "~bulma";
 @import "animations";
 @import "posts";
 @import "wp";
 
 #page {
+  background: $retro;
+  .section{
+    background: $retro;
+  }
   header {
     box-shadow: 1px 1px 1px;
     margin-bottom: 1em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     .hero-foot {
       background: rgba(0,0,0,0.2);
     }
@@ -26,7 +33,13 @@ $widescreen: 1192px;
     background-size: cover;
     background-image: url(http://www.blameitonbernie.de/wp-content/uploads/2017/01/bg-1.jpg);
     background-position: 0;
-    color: white!important;
+    color: $white!important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+
+    .content {
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+      color: $white!important;
+    }
   }
 
 
@@ -45,7 +58,7 @@ $widescreen: 1192px;
   }
 
   .button.is-primary.is-outlined:hover{
-    a {color: white};
+    a {color: $white};
   }
 }
 
@@ -67,4 +80,10 @@ $widescreen: 1192px;
   background-size: cover;
   background-image: url(http://www.blameitonbernie.de/wp-content/uploads/2017/01/bg-1.jpg);
   background-position: 0;
+}
+
+.is-inset {
+    /* Shadows are visible under slightly transparent text color */
+    color: rgba(255,255,255, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
 }

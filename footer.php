@@ -12,7 +12,7 @@
 ?>
 
 	</div><!-- #content -->
-    <footer class="footer">
+    <footer class="footer hero is-primary">
         <div class="container">
             <div class="content has-text-centered">
                 <p>Mehr von <span class="lobster">Blame it on Bernie</span> findest du auch:</p>
