@@ -1,4 +1,5 @@
 $primary: #058199;
+//$primary: #4d6489;
 $size-6: 18px;
 $lobster:'Lobster', cursive!important;
 $family-sans-serif: 'Raleway', sans-serif;
@@ -9,21 +10,48 @@ $widescreen: 1192px;
 @import "~bulma";
 @import "animations";
 @import "posts";
+@import "wp";
 
-.lobster {
-  font-family: $lobster;
+#page {
+  header {
+    box-shadow: 1px 1px 1px;
+    margin-bottom: 1em;
+  }
+  footer.footer {
+    margin-top: 1em;
+    box-shadow: 0px 0px 3px rgba(0,0,0, 0.5);
+  }
+
+
+  .lobster {
+    font-family: $lobster;
+  }
+
+  .section.is-wide {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .pagination-next,
+  .pagination-previous{
+    overflow: hidden;
+  }
+
+  .button.is-primary.is-outlined:hover{
+    a {color: white};
+  }
 }
 
-.section.is-wide {
-  padding-left: 0px;
-  padding-right: 0px;
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
-
-.pagination-next,
-.pagination-previous{
-  overflow: hidden;
-}
-
-.button.is-primary.is-outlined:hover{
-  a {color: white};
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

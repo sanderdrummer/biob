@@ -12,10 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-    <div class="container section is-hidden-tablet">
-        <h3>Schau dich ruhig noch etwas um</h3>
-        <?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'footer-menu' ) ); ?>
-    </div>
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
@@ -23,11 +19,15 @@
                 <a target="_blank" href="https://www.facebook.com/blameitonbernie/">bei Facebook</a>
                 <a target="_blank" href="https://www.youtube.com/channel/UCLGMjBZq0dMDKaTZN_YLo8w">auf Youtube</a>
             </div>
+            <div class="content has-text-centered">
+                <?php wp_nav_menu(array('items_wrap' => '%3$s', 'walker' => new Bootstrap_Nav_Walker(), 'container' => false, 'menu_class' => '', 'theme_location' => 'menu-2')); ?>
+            </div>
         </div>
     </footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 
 </body>
 </html>
